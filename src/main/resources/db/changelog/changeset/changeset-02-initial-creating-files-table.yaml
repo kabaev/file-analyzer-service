@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: changeset-02-initial-creating-files-table
+      author: Timur Kabaev
+      changes:
+        - createTable:
+            tableName: files
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: uri
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: key
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: user_id

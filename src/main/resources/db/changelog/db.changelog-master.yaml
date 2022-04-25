@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/changeset-01-initial-creating-users-table.yaml
+  - include:
+      file: db/changelog/changeset/changeset-02-initial-creating-files-table.yaml
+
